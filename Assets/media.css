@@ -156,9 +156,6 @@
   {
     column-gap: 7rem;
   }
-  .line {
-    margin-top: 1000px;
-  }
 }
 
 /* For tall screens on mobiles y desktop*/
@@ -166,5 +163,13 @@
     .home__container 
     {
         height: 640px;
+    }
+    hr 
+    {
+      margin-top: 100px;
+    }
+   .bot
+    {
+      margin-bottom: 10px;
     }
 }
