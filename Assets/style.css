@@ -269,7 +269,9 @@ img
 .active-link{
   color: var(--first-color);
   font-weight: var(--font-semi-bold);
-
+  border-bottom: 5px solid var(--first-color);
+  padding-bottom: 10px;
+  border-radius: 1px;
 }
 
 /* Change background header */
