@@ -156,6 +156,9 @@
   {
     column-gap: 7rem;
   }
+  .line {
+    margin-top: 1000px;
+  }
 }
 
 /* For tall screens on mobiles y desktop*/
