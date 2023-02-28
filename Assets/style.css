@@ -20,6 +20,8 @@
    --font-color-text-area: #333333;
    --textbox:#333333;
 
+
+   --DARKMODEMAP: invert(0%);
   /*========== Font and typography ==========*/
   --body-font: 'Roboto', sans-serif;
   --header-font:'Raleway', sans-serif;
@@ -31,6 +33,7 @@
   --normal-font-size: .938rem;
   --small-font-size: .813rem;
   --smaller-font-size: .75rem;
+
 
   /*========== Font weight ==========*/
   --button:  450;
@@ -102,6 +105,8 @@ body.dark-theme
   --font-color-text-area:#ffff;
   --second-color: #FEC900;
   --textbox:#333333;
+  --DARKMODEMAP: invert(90%);
+
 }
 /*========== Button Dark/Light ==========*/
 .change-theme
@@ -663,7 +668,10 @@ h1
   line-height: 25px;
   color: var(--light-color);
 }
-
+.contactimg
+{
+  filter: var(--DARKMODEMAP);
+}
 /*========== TEXTBOX ==========*/
 .settings input
 {
