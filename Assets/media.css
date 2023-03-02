@@ -134,10 +134,7 @@
   {
     padding: 1.5rem;
   }
-  .menu__img
-  {
-    width: 130px;
-  }
+  
 }
 @media screen and (min-width: 960px){
   .bd-container
