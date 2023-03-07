@@ -5,20 +5,24 @@
   .app__container, 
   .mission__container, 
   .vision__container, 
-  .services__container, 
-  .contact__container
+  .contact__container,
+  .services__container
   {
     grid-template-columns: repeat(2,1fr);
     align-items: center;
   }
   .bot-footer
   {
-    display: grid;
     grid-template-columns: repeat(3,1fr);
     align-items: center;
     justify-content:space-between;
   }
-  .vision__container{
+  .services__content
+  {
+    display: flex;
+  }
+  .vision__container
+  {
     gap: 100px;
   }
   .mission__container 
@@ -91,14 +95,16 @@
   {
     height: calc(var(--header-height) + 1.5rem);
   }
-  .nav__list{
+  .nav__list
+  {
     display: flex;
   }
   .nav__item{
     margin-left: var(--mb-5);
     margin-bottom: 0;
   }
-  .nav__toggle{
+  .nav__toggle
+  {
     display: none;
   }
 
@@ -114,12 +120,6 @@
     justify-items: center;
   }
 
-  .services__container,
-  
-  {
-    margin-top: var(--mb-6);
-  }
-
   .menu__container
   {
     display: grid;
@@ -133,10 +133,7 @@
   {
     padding: 1.5rem;
   }
-  .menu__img
-  {
-    width: 130px;
-  }
+  
 }
 @media screen and (min-width: 960px){
   .bd-container
@@ -147,6 +144,7 @@
   .home__img
   {
     width: 500px;
+
   }
   .logo_img
   {

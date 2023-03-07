@@ -19,6 +19,9 @@
    --text-area-color: #ECF2FE;
    --font-color-text-area: #333333;
    --textbox:#333333;
+   --sentence:#666666;
+   --missviss: #121212;
+   --service: #333333;
 
 
    --DARKMODEMAP: invert(0%);
@@ -47,6 +50,7 @@
   --mb-1-2: .7rem;
   --mb-2: 1rem;
   --mb-02: 1.2rem;
+  --mb-021:1rem;
   --mb-3: 1.5rem;
   --mb-4: 2rem;
   --mb-46: 2.45rem;
@@ -69,6 +73,8 @@
 
 @media screen and (min-width: 768px){
   :root{
+    --header:4.2rem;
+    --pinaka:4.5rem;
     --biggest-font-size: 4rem;
     --home-font-size:3.5rem;
     --h1-font-size: 2.25rem;
@@ -106,6 +112,9 @@ body.dark-theme
   --second-color: #FEC900;
   --textbox:#333333;
   --DARKMODEMAP: invert(90%);
+  --sentence:white;
+   --missviss: #021DF3;
+     --service: #021DF3;
 
 }
 /*========== Button Dark/Light ==========*/
@@ -129,6 +138,12 @@ body
   background-color: var(--body-color);
   color: var(--text-color);
   line-height: 1.6;
+  -webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+-o-user-select: none;
+user-select: none;
 }
 
 h1,h2,h3,p,ul
@@ -237,7 +252,8 @@ img
     box-shadow: 0 4px 4px rgba(0,0,0,.1);
     border-radius: 0 0 1rem 1rem;
     z-index: var(--z-fixed);
-    margin-top: var(--mb-4);
+    margin-top: var(--mb-021);
+    
   }
 }
 .nav__item
@@ -342,7 +358,12 @@ h1
   color: var(--first-color);
   margin-bottom: var(--mb-1);
 }
-.help{
+.tech {
+  font-size: var(--pinaka);
+}
+.help
+{
+  font-size: var(--header);
   color: var(--font-color-text-area);
 }
 .home__img, 
@@ -354,7 +375,7 @@ h1
 {
   width:auto;
 }
-#more-btn
+#more-btn-about
 {
   cursor: pointer;
   font-size: 13px;
@@ -365,9 +386,9 @@ h1
   border-radius: 8px;
   padding: 15px;
   background-color: var(--first-color);
-  width: 120px;
+  width: 150px;
 }
-#more-btn:hover
+#more-btn-about:hover
 {
   background-color: var(--hover-color);
   color: white;
@@ -395,6 +416,7 @@ h1
   border-radius: 1px;
   color:var(--font-color-text-area);;
 }
+
 .about__description
 {
   margin-bottom: var(--mb-3);
@@ -402,7 +424,7 @@ h1
 }
 .num-abt
 {
-  color: var( --second-color);
+  color: var(--second-color);
   opacity: 50%;
 }
 .indv-about
@@ -419,6 +441,18 @@ h1
 }
 .cont-title {
   color: var(--font-color-text-area);
+}
+.cont-title:hover
+{
+  color: var(--second-color);
+}
+.num-abt:hover
+{
+  color: var(--second-color);
+  opacity: 100%;
+}
+.cont{
+  color: var(--sentence);
 }
 /*========== Vision ==========*/
 .vision__data h1
@@ -461,9 +495,13 @@ h1
   border-radius: .5rem;
   justify-self: center;
 }
-.vision-title {
+.vision-title 
+{
 
   color: var( --font-color-text-area);
+}
+.vision-title:hover{
+  color: var(--missviss);
 }
 /*========== mission ==========*/
 h1
@@ -476,12 +514,14 @@ h1
 {
   line-height: 120%;
 }
-.mission__container
+
+/*.mission__container
 {
   margin-top: var(--mb-5);
   height: calc(100vh - var(--header-height));
   align-content: center;
-}
+}*/
+
 .mission__title
 {
   font-size: var(--biggest-font-size);
@@ -494,7 +534,7 @@ h1
   color: var(--light-color);
   margin-bottom: var(--mb-4);
 }
-#more-btn
+#more-btn-vis-mis
 {
   cursor: pointer;
   font-size: 13px;
@@ -505,9 +545,9 @@ h1
   border-radius: 8px;
   padding: 15px;
   background-color: var(--first-color);
-  width: 120px;
+  width: 140px;
 }
-#more-btn:hover
+#more-btn-vis-mis:hover
 {
   background-color: var(--hover-color);
   color: white;
@@ -520,16 +560,24 @@ h1
 }
 
 /*========== SERVICES ==========*/
-.servicetitle, .services__title {
+.servicetitle, .services__title
+{
   color: var(--font-color-text-area);
 }
-.services__content
+.iconify
 {
-  display: flex;
+  color: var(--service);
 }
-.services-title
+.iconify:hover
 {
-  margin-left: var(--mb-4);
+  color: var(--first-color);
+}
+.section-subtitle:hover{
+  color: var(--second-color);
+}
+.services__title:hover
+{
+  color: var(--first-color);
 }
 .fifth
 {
@@ -537,7 +585,19 @@ h1
   align-items: center;
   justify-content: center;
 }
-
+.services-title
+{
+  margin-left: var(--mb-4);
+}
+.second{
+  margin-top: -20px;
+  margin-left: var(--mb-5);
+}
+.third
+{
+  margin-top: 20px;
+  margin-left: var(--mb-5);
+}
 /*========== team ==========*/
 .team-p
 {
@@ -569,9 +629,8 @@ h1
   height: 400px;
   width: 280px ;
 }
-.menu__img
+.menu__img, .about__initial
 {
-  width: 100px;
   align-self: center;
   margin-bottom: var(--mb-2);
 }
@@ -618,7 +677,11 @@ h1
 {
   color: var(--font-color-text-area);
 }
-
+.menu__img:hover
+{
+  transform: scale(1.1);
+  transition: 0.3s;
+}
 /*========== contact  ==========*/
 h1
 {
@@ -655,7 +718,7 @@ h1
   border-radius: 8px;
   padding: 15px;
   background-color: var(--first-color);
-  width: 120px;
+  width: 100%;
 }
 #more-btn:hover
 {
@@ -665,7 +728,7 @@ h1
 .content-home
 {
   font-family: var(--body-font);
-  line-height: 25px;
+  line-height: 25px;about__initial
   color: var(--light-color);
 }
 .contactimg
@@ -807,4 +870,7 @@ hr
 {
   color: #000000;
   opacity: 25%;
+}
+.footer__title:hover{
+  color: var(--second-color);
 }
